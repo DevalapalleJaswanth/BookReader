@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getBookDetails } from '../Services/Services';
+import Loader from "react-loader-spinner";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const gridstyle: any = { xs: 2.2, justifyContent: "center" }
 
@@ -20,9 +22,17 @@ function Details(props: any) {
         <>
             {console.log(bookDetails)}
             {
-                loading ? <div>Loading ...</div> :
+                loading ? <div style={{ marginLeft: "500px", marginTop: "100px" }}>
+                    <Loader
+                        type="Puff"
+                        color="rgb(205, 204, 212)"
+                        height={100}
+                        width={100}
+                        timeout={3000}
+                    />
+                </div> :
                     <div>
-                        <Link to='/' style={{ margin: "25px", fontSize: "20px", textDecoration: "none" }}>Back</Link>
+                        <Link to='/' style={{ margin: "25px", fontSize: "20px", color: "black", textDecoration: "none" }}><ArrowBackIosIcon />Back</Link>
                         <div style={{ margin: "25px", display: "flex" }}>
                             <div >
                                 <img src={"https://assignment.api.staging.monomi.lt/" + bookDetails.imageLink} width="200" height="250" />

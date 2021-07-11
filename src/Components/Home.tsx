@@ -11,6 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Loader from "react-loader-spinner";
 
 const gridstyle: any = { xs: 2.2, justifyContent: "center" }
 
@@ -18,7 +19,6 @@ function Home() {
     const [loading, setLoading] = useState(false)
     const [books, setBooks] = useState([]);
     const [sBooks, setSBooks] = useState<any>();
-    const [sname, setSName] = useState<any>();
     var bookDetails: any;
     useEffect(() => {
         setLoading(true)
@@ -45,10 +45,18 @@ function Home() {
     return (
         <>
             {
-                loading ? <div>Loading ...</div> :
+                loading ? <div style={{ marginLeft: "500px", marginTop: "100px" }}>
+                    <Loader
+                        type="Puff"
+                        color="rgb(205, 204, 212)"
+                        height={100}
+                        width={100}
+                        timeout={3000}
+                    />
+                </div> :
                     <div>
 
-                        Search<input type='text' onChange={(e) => { setSName(e.target.value); bookDetails = search(e.target.value); setSBooks(bookDetails) }} />
+                        Search<input type='text' onChange={(e) => { bookDetails = search(e.target.value); setSBooks(bookDetails) }} />
 
                         {sBooks == null || sBooks == undefined ?
                             <Grid container direction="row"
