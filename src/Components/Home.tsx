@@ -27,10 +27,11 @@ function Home() {
     }, [])
 
     const search = (name: any) => {
+        name = name.toUpperCase();
         var n: any;
         var e: any;
         books.map((book: any, i: any) => {
-            if (name == book.title) {
+            if (name === book.title.toUpperCase() || name === book.author.toUpperCase()) {
                 n = book;
             }
             else {
