@@ -25,8 +25,9 @@ function Details(props: any) {
                         <Link to='/' style={{ margin: "25px", fontSize: "20px", textDecoration: "none" }}>Back</Link>
                         <div style={{ margin: "25px", display: "flex" }}>
                             <div >
-                                <img src={bookDetails.imageLink} width="200" height="250" />
-                                <p style={{ fontSize: "15px" }}>TITLE : {bookDetails.title} <span style={{ fontSize: "6px" }}>| LANGUAGE : {bookDetails.language}</span> </p>
+                                <img src={"https://assignment.api.staging.monomi.lt/" + bookDetails.imageLink} width="200" height="250" />
+                                <p style={{ fontSize: "15px" }}>TITLE : {bookDetails.title} </p>
+                                <p><span style={{ fontSize: "6px" }}>LANGUAGE : {bookDetails.language}</span> | <span style={{ fontSize: "6px" }}>PAGES : {bookDetails.language}</span> | <span style={{ fontSize: "6px" }}>YEAR : {bookDetails.year}</span> </p>
                                 <p style={{ fontSize: "10px" }}>AUTHOR : {bookDetails.author} <span style={{ fontSize: "6px" }}>| COUNTRY : {bookDetails.country}</span></p>
                             </div>
                             <div style={{ margin: "0px" }}>

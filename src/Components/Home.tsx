@@ -64,7 +64,7 @@ function Home() {
                                                 <Card variant="outlined" style={{ margin: "15px", background: 'rgb(205, 204, 212)' }}>
                                                     <CardContent>
                                                         <Typography style={{ margin: "5px" }}>
-                                                            <img src={book.imageLink} width="300" height="100" />
+                                                            <img src={"https://assignment.api.staging.monomi.lt/" + book.imageLink} width="300" height="200" />
                                                         </Typography>
                                                         <Typography >
                                                             <p style={{ fontSize: "10px" }}>{book.title}</p>
@@ -84,7 +84,7 @@ function Home() {
                                         <Card variant="outlined" style={{ margin: "15px", background: 'rgb(205, 204, 212)' }}>
                                             <CardContent>
                                                 <Typography style={{ margin: "5px" }}>
-                                                    <img src={sBooks.imageLink} width="300" height="100" />
+                                                    <img src={"https://assignment.api.staging.monomi.lt/" + sBooks.imageLink} width="300" height="200" />
                                                 </Typography>
                                                 <Typography >
                                                     <p style={{ fontSize: "10px" }}>{sBooks.title}</p>
