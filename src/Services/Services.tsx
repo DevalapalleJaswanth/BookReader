@@ -5,3 +5,9 @@ export async function getAllBooks() {
         .then(resp => { console.log(resp.data); data = resp.data })
     return data;
 }
+export async function getBookDetails(id: any) {
+    var data: any;
+    await axios.get(`https://assignment.api.staging.monomi.lt/v1/books/${id}`, { headers: { 'Authorization': 'Bearer Monomi2021' } })
+        .then(resp => { console.log(resp.data); data = resp.data })
+    return data;
+}
