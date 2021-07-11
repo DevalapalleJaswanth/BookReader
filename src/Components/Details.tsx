@@ -8,8 +8,6 @@ import { getBookDetails } from '../Services/Services';
 import Loader from "react-loader-spinner";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
-const gridstyle: any = { xs: 2.2, justifyContent: "center" }
-
 function Details(props: any) {
     const [loading, setLoading] = useState(false)
     const [bookDetails, setBookDetails] = useState<any>([]);
