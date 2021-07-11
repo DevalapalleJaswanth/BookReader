@@ -11,7 +11,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 const gridstyle: any = { xs: 2.2, justifyContent: "center" }
 
@@ -38,7 +37,7 @@ function Home() {
                                 books.map((book: any, i: any) => (
                                     <Grid style={gridstyle}>
                                         <Link to={{ pathname: "/Details", state: { id: book.id } }}>
-                                            <Card variant="outlined" style={{ margin: "15px" }}>
+                                            <Card variant="outlined" style={{ margin: "15px", background: 'rgb(205, 204, 212)' }}>
                                                 <CardContent>
                                                     <Typography style={{ margin: "5px" }}>
                                                         <img src={book.imageLink} width="300" height="100" />

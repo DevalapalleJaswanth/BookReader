@@ -22,8 +22,6 @@ function Details(props: any) {
             {
                 loading ? <div>Loading ...</div> :
                     <div>
-
-
                         <Link to='/' style={{ margin: "25px", fontSize: "20px", textDecoration: "none" }}>Back</Link>
                         <div style={{ margin: "25px", display: "flex" }}>
                             <div >
@@ -32,11 +30,10 @@ function Details(props: any) {
                                 <p style={{ fontSize: "10px" }}>AUTHOR : {bookDetails.author} <span style={{ fontSize: "6px" }}>| COUNTRY : {bookDetails.country}</span></p>
                             </div>
                             <div style={{ margin: "0px" }}>
-                                <iframe src={bookDetails.link} width="1150" height="800"></iframe>
+                                <iframe src={bookDetails.link} width="1250" height="1000"></iframe>
                             </div>
                         </div>
                     </div>
-
             }
         </>
     )
