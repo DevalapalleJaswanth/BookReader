@@ -28,11 +28,11 @@ function Details(props: any) {
                         <div style={{ margin: "25px", display: "flex" }}>
                             <div >
                                 <img src={bookDetails.imageLink} width="200" height="250" />
-                                <p style={{ fontSize: "20px" }}>{bookDetails.title}</p>
-                                <p style={{ fontSize: "15px" }}>{bookDetails.author}</p>
+                                <p style={{ fontSize: "15px" }}>TITLE : {bookDetails.title} <span style={{ fontSize: "6px" }}>| LANGUAGE : {bookDetails.language}</span> </p>
+                                <p style={{ fontSize: "10px" }}>AUTHOR : {bookDetails.author} <span style={{ fontSize: "6px" }}>| COUNTRY : {bookDetails.country}</span></p>
                             </div>
                             <div style={{ margin: "0px" }}>
-                                <iframe src={bookDetails.link} width="1150" height="650"></iframe>
+                                <iframe src={bookDetails.link} width="1150" height="800"></iframe>
                             </div>
                         </div>
                     </div>
