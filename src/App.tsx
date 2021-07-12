@@ -16,8 +16,8 @@ const header = {
 function App() {
   return (
     <>
-      <div style={{ background: 'rgb(205,204,212)' }}>
-        <p style={{ color: 'rgb(0, 0, 0)', fontSize: '40px' }}>Book-Reader</p>
+      <div >
+        <div style={{ color: 'rgb(0, 0, 0)', fontSize: '40px', margin: "10px" }}>Book-Reader<br /></div>
       </div>
       <Router>
         <Switch>
